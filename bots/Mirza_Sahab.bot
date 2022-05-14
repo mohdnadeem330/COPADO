@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <botMlDomain>
+        <label>Mirza Sahab</label>
+        <mlIntents>
+            <developerName>Business_Hours</developerName>
+            <label>Business Hours</label>
+            <relatedMlIntents>
+                <relatedMlIntent>BookStore_Bot.Business_Hours</relatedMlIntent>
+            </relatedMlIntents>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Current_Offers</developerName>
+            <label>Current Offers</label>
+            <relatedMlIntents>
+                <relatedMlIntent>BookStore_Bot.Current_Offers</relatedMlIntent>
+            </relatedMlIntents>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Location_Info</developerName>
+            <label>Location Info</label>
+            <mlIntentUtterances>
+                <utterance>what is your location</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>where is your shop</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>location</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>shop location</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>where at ghazipur tiraha</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>where is the shop</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what&apos;s the location of your shop</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what is the location of your shop</utterance>
+            </mlIntentUtterances>
+            <relatedMlIntents>
+                <relatedMlIntent>BookStore_Bot.Location</relatedMlIntent>
+            </relatedMlIntents>
+        </mlIntents>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>CaseType</developerName>
+            <extractionType>Value</extractionType>
+            <label>CaseType</label>
+            <mlSlotClassValues>
+                <synonymGroup>
+                    <languages>en_US</languages>
+                    <terms>Returns</terms>
+                </synonymGroup>
+                <value>Return</value>
+            </mlSlotClassValues>
+            <mlSlotClassValues>
+                <synonymGroup>
+                    <languages>en_US</languages>
+                    <terms>Exchanges</terms>
+                </synonymGroup>
+                <value>Exchange</value>
+            </mlSlotClassValues>
+        </mlSlotClasses>
+        <name>Mirza_Sahab</name>
+    </botMlDomain>
+    <botVersions>
+        <fullName>v1</fullName>
+        <botDialogGroups>
+            <developerName>Create_Case</developerName>
+            <label>Create Case</label>
+        </botDialogGroups>
+        <botDialogGroups>
+            <developerName>FAQs</developerName>
+            <label>FAQs</label>
+        </botDialogGroups>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Hi, I’m Mirza Sahab, a digital assistant. How can I help you ?</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Business_Hours</targetBotDialog>
+                    </botNavigationLinks>
+                    <botNavigationLinks>
+                        <targetBotDialog>Location_Info</targetBotDialog>
+                    </botNavigationLinks>
+                    <botNavigationLinks>
+                        <targetBotDialog>Current_Offers</targetBotDialog>
+                    </botNavigationLinks>
+                    <botNavigationLinks>
+                        <targetBotDialog>Create_a_Case</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <developerName>Welcome</developerName>
+            <label>Welcome</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Welcome</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <developerName>Main_Menu</developerName>
+            <label>Main Menu</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <conversationSystemMessage>
+                    <type>Transfer</type>
+                </conversationSystemMessage>
+                <type>SystemMessage</type>
+            </botSteps>
+            <developerName>Transfer_To_Agent</developerName>
+            <label>Transfer To Agent</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Goodbye! Click the &quot;End Chat&quot; button to end this chat</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>End_Chat</developerName>
+            <label>End Chat</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Sorry, I didn&apos;t understand that.</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Confused</developerName>
+            <label>Confused</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Unfortunately, there are no agents available at the moment</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>No_Agent_Available</developerName>
+            <label>No Agent</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botSteps>
+                <botMessages>
+                    <message>Unfortunately, a system error occurred. I&apos;ll connect you to an agent who can help.</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <conversationSystemMessage>
+                    <type>Transfer</type>
+                </conversationSystemMessage>
+                <type>SystemMessage</type>
+            </botSteps>
+            <developerName>Error_Handling</developerName>
+            <label>Error Handler</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botDialogGroup>FAQs</botDialogGroup>
+            <botSteps>
+                <botMessages>
+                    <message>Our Store is open from Monday-Saturday 9am-8pm. On Sunday 11:30am-6pm</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Business_Hours</developerName>
+            <label>Business Hours</label>
+            <mlIntent>Business_Hours</mlIntent>
+            <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botDialogGroup>FAQs</botDialogGroup>
+            <botSteps>
+                <botMessages>
+                    <message>In front of Bunayi Vidyalaya, Near Rahul Hospital, Ghazipur Tiraha, Maunath Bhanjan-275101 Uttar Pradesh India</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Location_Info</developerName>
+            <label>Location Info</label>
+            <mlIntent>Location_Info</mlIntent>
+            <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botDialogGroup>FAQs</botDialogGroup>
+            <botSteps>
+                <botMessages>
+                    <message>1-Buy1Get1on Crizal Lenses
+2- Get Flat 50% Discount on Velocity Frames &amp; Sunglasses.
+3- Get upto 35% Discount Ray Ban and Police Frame &amp; Sunglasses</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Current_Offers</developerName>
+            <label>Current Offers</label>
+            <mlIntent>Current_Offers</mlIntent>
+            <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botDialogGroup>Create_Case</botDialogGroup>
+            <botSteps>
+                <botVariableOperation>
+                    <botMessages>
+                        <message>What type of case you are opening today?</message>
+                    </botMessages>
+                    <botQuickReplyOptions>
+                        <literalValue>Exchange</literalValue>
+                    </botQuickReplyOptions>
+                    <botQuickReplyOptions>
+                        <literalValue>Return</literalValue>
+                    </botQuickReplyOptions>
+                    <botVariableOperands>
+                        <disableAutoFill>true</disableAutoFill>
+                        <sourceName>CaseType</sourceName>
+                        <sourceType>MlSlotClass</sourceType>
+                        <targetName>CaseTypeInput</targetName>
+                        <targetType>ConversationVariable</targetType>
+                    </botVariableOperands>
+                    <optionalCollect>false</optionalCollect>
+                    <quickReplyType>Static</quickReplyType>
+                    <quickReplyWidgetType>Buttons</quickReplyWidgetType>
+                    <type>Collect</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Collect_Case_Description</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <developerName>Create_a_Case</developerName>
+            <label>Create a Case</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botDialogGroup>Create_Case</botDialogGroup>
+            <botSteps>
+                <botVariableOperation>
+                    <botMessages>
+                        <message>Please give me a detailed description so that I can assist you the best.</message>
+                    </botMessages>
+                    <botVariableOperands>
+                        <disableAutoFill>true</disableAutoFill>
+                        <sourceName>_Text</sourceName>
+                        <sourceType>StandardMlSlotClass</sourceType>
+                        <targetName>CaseDescription</targetName>
+                        <targetType>ConversationVariable</targetType>
+                    </botVariableOperands>
+                    <optionalCollect>false</optionalCollect>
+                    <quickReplyWidgetType>Buttons</quickReplyWidgetType>
+                    <type>Collect</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Insert_Case_Record</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <developerName>Collect_Case_Description</developerName>
+            <label>Collect Case Description</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <botDialogs>
+            <botDialogGroup>Create_Case</botDialogGroup>
+            <botSteps>
+                <botVariableOperation>
+                    <botInvocation>
+                        <invocationActionName>Inser_Bot_Case</invocationActionName>
+                        <invocationActionType>flow</invocationActionType>
+                        <invocationMappings>
+                            <parameterName>CaseDescription</parameterName>
+                            <type>Input</type>
+                            <variableName>CaseDescription</variableName>
+                            <variableType>ConversationVariable</variableType>
+                        </invocationMappings>
+                        <invocationMappings>
+                            <parameterName>CaseType</parameterName>
+                            <type>Input</type>
+                            <variableName>CaseTypeInput</variableName>
+                            <variableType>ConversationVariable</variableType>
+                        </invocationMappings>
+                        <invocationMappings>
+                            <parameterName>CaseNumber</parameterName>
+                            <type>Output</type>
+                            <variableName>Case_Number</variableName>
+                            <variableType>ConversationVariable</variableType>
+                        </invocationMappings>
+                    </botInvocation>
+                    <type>Set</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <botSteps>
+                <botMessages>
+                    <message>Thank You! I have created a case for you, your case number is {!CaseNumber}</message>
+                </botMessages>
+                <type>Message</type>
+            </botSteps>
+            <botSteps>
+                <type>Wait</type>
+            </botSteps>
+            <developerName>Insert_Case_Record</developerName>
+            <label>Insert Case Record</label>
+            <showInFooterMenu>false</showInFooterMenu>
+        </botDialogs>
+        <conversationSystemDialogs>
+            <dialog>Error_Handling</dialog>
+            <type>ErrorHandling</type>
+        </conversationSystemDialogs>
+        <conversationSystemDialogs>
+            <dialog>No_Agent_Available</dialog>
+            <type>TransferFailed</type>
+        </conversationSystemDialogs>
+        <conversationVariables>
+            <dataType>Text</dataType>
+            <developerName>CaseDescription</developerName>
+            <label>CaseDescription</label>
+        </conversationVariables>
+        <conversationVariables>
+            <dataType>Text</dataType>
+            <developerName>CaseTypeInput</developerName>
+            <label>CaseTypeInput</label>
+        </conversationVariables>
+        <conversationVariables>
+            <dataType>Text</dataType>
+            <developerName>Case_Number</developerName>
+            <label>CaseNumber</label>
+        </conversationVariables>
+        <entryDialog>Welcome</entryDialog>
+        <mainMenuDialog>Main_Menu</mainMenuDialog>
+        <nlpProviders>
+            <language>en_US</language>
+            <nlpProviderType>EinsteinAi</nlpProviderType>
+        </nlpProviders>
+    </botVersions>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.ChatKey</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Text</dataType>
+        <developerName>ChatKey</developerName>
+        <label>Chat Key</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.ContactId</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>ContactId</developerName>
+        <label>Contact Id</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.LiveChatVisitorId</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>EndUserId</developerName>
+        <label>End User Id</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.Id</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>RoutableId</developerName>
+        <label>Routable Id</label>
+    </contextVariables>
+    <description>A bot from scratch.</description>
+    <label>Mirza Sahab</label>
+    <logPrivateConversationData>false</logPrivateConversationData>
+</Bot>
