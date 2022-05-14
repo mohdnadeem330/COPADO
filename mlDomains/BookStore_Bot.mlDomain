@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MlDomain xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>BookStore Bot</label>
+    <mlIntents>
+        <description>It represent the timings of the shop</description>
+        <developerName>Business_Hours</developerName>
+        <label>Business Hours</label>
+        <mlIntentUtterances>
+            <utterance>till when the shop opens</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>whats the timing of the shop</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop opening time on sunday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the timing of the shop</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>whats the timing ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the timing ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>when will the shop open ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the shop timing on weekends ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what&apos;s the shop timing on sunday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop opening time?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop closing time on sunday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop closing time?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop timing on friday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>timing of your shop ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>timing for the shop on sunday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what will be the shop timing on sunday and saturday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>timing of the shop ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>till when the shop will be open everyday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the opening time of the shop on sunday?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the opening time of your shop?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>What offers are currently going on</description>
+        <developerName>Current_Offers</developerName>
+        <label>Current Offers</label>
+        <mlIntentUtterances>
+            <utterance>Offers</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Any discounts on frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discounts</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>offer on contact lenses ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discount on sunglasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discount on ray ban sunglasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discount on tommy hilfiger frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discounts on watches</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>offer on idee frames and sunglasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>offer on uv sunglasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>any offers on bluecut lenses ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>offers on computer glasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>offer on selected frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discount on idee frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>any offer on ray ban frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>is there any offers on ray ban sunglasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>discounts</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>any discount on fastrack sunglasses</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>any offer on titan frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>any discount on carrera frames</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what discount will be offered on ray ban frames?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the offer on stepper frames?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>It states the location of the business</description>
+        <developerName>Location</developerName>
+        <label>Location</label>
+        <mlIntentUtterances>
+            <utterance>Where is your shop?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>location</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>location of shop</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where is the location</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where is the address?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop location</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where is your situated ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the location of the shop?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>address?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the address?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>address of the shop</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where is your shop?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what is the location ?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>your location?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what&apos;s the address?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>where is your shop in mau</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>shop location</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>location of your shop</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>what&apos;s the location of the shop?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>your location</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+</MlDomain>
